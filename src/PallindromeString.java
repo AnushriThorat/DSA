@@ -1,5 +1,4 @@
 //Check whether a string is palindrome.
-//"madam" → true
 
 public class PallindromeString {
     public static void main(String[] args)
