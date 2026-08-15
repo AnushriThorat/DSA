@@ -17,6 +17,6 @@ public class RevString {
             left++;
             right--;
         }
-        System.out.println("Reverse String:" +new String(ch);
+        System.out.println("Reverse String:" +new String(ch));
     }
 }
