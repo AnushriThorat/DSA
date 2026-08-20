@@ -132,6 +132,25 @@ public class SinglyLinkedList {
             }
         }
     }
+
+    public void revprintList(){
+        if(root==null){
+            System.out.println("List is empty");
+        }
+        else{
+            Node prev=null;
+            Node curr=root;
+
+            while(curr!=null){
+                Node next=curr.next;
+                curr.next=prev;
+
+                prev=curr;
+                curr=next;
+            }
+       root=prev;
+        }
+    }
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         SinglyLinkedList obj=new SinglyLinkedList();
@@ -148,7 +167,8 @@ public class SinglyLinkedList {
             System.out.println("5.Search Element");
             System.out.println("6.Insert element in after ");
             System.out.println("7.Delete after");
-            System.out.println("8.Print LinkedList");
+            System.out.println("8.Print Reverse LinkedList");
+            System.out.println("9.PrintList");
 
             System.out.println("Enter your choice");
             choice=sc.nextInt();
@@ -192,7 +212,13 @@ public class SinglyLinkedList {
                     data= sc.nextInt();
                     obj.delete(data);
                     break;
+
                 case 8:
+                    obj.revprintList();
+                    obj.print();
+                    break;
+
+                case 9:
                     obj.print();
                     break;
 
